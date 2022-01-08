@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import 'animate.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ParallaxProvider>
+        <App />
+      </ParallaxProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
